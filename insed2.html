@@ -1,0 +1,1948 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maa Khodiyar Dairy – Pure. Fresh. From the Farm.</title>
+
+    <!-- ===== CDN LINKS ===== -->
+    <!-- Google Fonts: DM Serif Display + DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons 1.11 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Swiper 11 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Animate.css 4 -->
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" rel="stylesheet">
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cream: #FFF8EE;
+            --cream-dark: #F5EDDA;
+            --saffron: #E8922A;
+            --saffron-light: #F9B85A;
+            --terracotta: #C1542A;
+            --terracotta-dark: #9A3D18;
+            --green: #2D6A4F;
+            --green-light: #52B788;
+            --brown: #2C1A0E;
+            --brown-mid: #5A3520;
+            --gold: #F4C842;
+            --text-main: #2C1A0E;
+            --text-muted: #7A5C3E;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--cream);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        /* ─── TYPOGRAPHY ─── */
+        .serif {
+            font-family: 'DM Serif Display', serif;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            margin-bottom: 0.6rem;
+        }
+
+        .section-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(1.9rem, 3.5vw, 2.9rem);
+            color: var(--brown);
+            line-height: 1.15;
+            margin-bottom: 0.8rem;
+        }
+
+        .section-sub {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+            max-width: 560px;
+        }
+
+        .divider-line {
+            width: 56px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--saffron), var(--gold));
+            border-radius: 3px;
+            margin: 0.9rem 0 2.2rem;
+        }
+
+        /* ─── BUTTONS ─── */
+        .btn-saffron {
+            background: var(--saffron);
+            color: #fff;
+            border: none;
+            padding: 11px 26px;
+            border-radius: 50px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            text-decoration: none;
+            transition: background 0.22s, transform 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .btn-saffron:hover {
+            background: var(--terracotta);
+            color: #fff;
+            transform: translateY(-1px);
+        }
+
+        .btn-ghost {
+            padding: 11px 26px;
+            border-radius: 50px;
+            border: 1.5px solid var(--terracotta);
+            color: var(--terracotta);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-decoration: none;
+            background: none;
+            transition: all 0.22s;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .btn-ghost:hover {
+            background: var(--terracotta);
+            color: #fff;
+        }
+
+        /* ─── NAVBAR ─── */
+        #navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 248, 238, 0.96);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(193, 84, 42, 0.1);
+            padding: 0 2rem;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: box-shadow 0.3s;
+        }
+
+        #navbar.scrolled {
+            box-shadow: 0 4px 28px rgba(44, 26, 14, 0.08);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .nav-logo-icon {
+            width: 38px;
+            height: 38px;
+            background: var(--saffron);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        .nav-logo-text {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.05rem;
+            color: var(--brown);
+            line-height: 1.2;
+        }
+
+        .nav-logo-text small {
+            display: block;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.62rem;
+            color: var(--text-muted);
+            font-weight: 400;
+            letter-spacing: 0.06em;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--terracotta);
+        }
+
+        /* Bootstrap navbar toggler override */
+        .navbar-toggler {
+            border: none;
+            padding: 4px 6px;
+            background: none;
+            color: var(--brown);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+            outline: none;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            background: var(--cream);
+            border-bottom: 1px solid rgba(193, 84, 42, 0.12);
+            padding: 1.4rem 2rem;
+            flex-direction: column;
+            gap: 1.1rem;
+        }
+
+        .mobile-nav.show {
+            display: flex;
+        }
+
+        .mobile-nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* ─── HERO ─── */
+        #hero {
+            min-height: 100vh;
+            padding: 110px 5% 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 4rem;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--cream) 55%, #F2E4C8 100%);
+        }
+
+        .hero-mandala {
+            position: absolute;
+            right: -140px;
+            top: -140px;
+            width: 580px;
+            height: 580px;
+            opacity: 0.055;
+            pointer-events: none;
+        }
+
+        .hero-stamp {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(232, 146, 42, 0.12);
+            border: 1.5px dashed var(--saffron);
+            border-radius: 50px;
+            padding: 5px 16px;
+            font-size: 0.73rem;
+            font-weight: 700;
+            color: var(--terracotta);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 1.4rem;
+            width: fit-content;
+        }
+
+        .hero-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(3rem, 5.5vw, 5.4rem);
+            line-height: 1.06;
+            color: var(--brown);
+        }
+
+        .hero-title em {
+            color: var(--terracotta);
+            font-style: italic;
+            display: block;
+        }
+
+        .hero-sub {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+            max-width: 420px;
+            margin: 1.4rem 0 2.4rem;
+        }
+
+        .hero-img-card {
+            width: 100%;
+            max-width: 480px;
+            aspect-ratio: 4/3;
+            border-radius: 24px;
+            background: linear-gradient(135deg, #D4883A 0%, #7A5020 50%, #3A2210 100%);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 28px 70px rgba(44, 26, 14, 0.22);
+        }
+
+        .hero-img-inner {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .hero-img-icon {
+            font-size: 5rem;
+            opacity: 0.32;
+            color: var(--cream);
+        }
+
+        .hero-img-label {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.2rem;
+            color: rgba(255, 248, 238, 0.65);
+            text-align: center;
+            letter-spacing: 0.05em;
+        }
+
+        .hero-float-badge {
+            position: absolute;
+            bottom: -16px;
+            left: -16px;
+            background: var(--green);
+            color: #fff;
+            border-radius: 16px;
+            padding: 14px 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            box-shadow: 0 8px 24px rgba(45, 106, 79, 0.28);
+            line-height: 1.4;
+        }
+
+        .hero-float-badge strong {
+            display: block;
+            font-size: 1.3rem;
+        }
+
+        /* ─── MARQUEE ─── */
+        .marquee-strip {
+            background: var(--terracotta);
+            padding: 13px 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .marquee-inner {
+            display: inline-flex;
+            gap: 0;
+            animation: marquee 30s linear infinite;
+        }
+
+        .marquee-inner:hover {
+            animation-play-state: paused;
+        }
+
+        .marquee-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0 2.5rem;
+            color: #FFF8EE;
+            font-size: 0.86rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            border-right: 1.5px solid rgba(255, 248, 238, 0.22);
+        }
+
+        .marquee-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* ─── PRODUCTS ─── */
+        #products {
+            background: #fff;
+            padding: 90px 5%;
+        }
+
+        .product-card {
+            border-radius: 20px;
+            background: var(--cream);
+            border: 1.5px solid rgba(193, 84, 42, 0.1);
+            padding: 1.6rem;
+            cursor: default;
+            transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--saffron), var(--gold));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(44, 26, 14, 0.09);
+            border-color: var(--saffron);
+        }
+
+        .product-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .product-tag {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--green);
+            background: rgba(45, 106, 79, 0.1);
+            border-radius: 50px;
+            padding: 3px 10px;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .product-icon-wrap {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, rgba(232, 146, 42, 0.12), rgba(244, 200, 66, 0.08));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            color: var(--terracotta);
+            margin-bottom: 1rem;
+        }
+
+        .product-name {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.15rem;
+            color: var(--brown);
+            margin-bottom: 0.4rem;
+        }
+
+        .product-desc {
+            font-size: 0.84rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+        }
+
+        /* ─── WHY US ─── */
+        #why {
+            background: var(--cream-dark);
+            padding: 90px 5%;
+        }
+
+        .why-card {
+            background: var(--cream);
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            border: 1.5px solid rgba(193, 84, 42, 0.08);
+            transition: box-shadow 0.25s, transform 0.25s;
+            height: 100%;
+        }
+
+        .why-card:hover {
+            box-shadow: 0 12px 32px rgba(44, 26, 14, 0.08);
+            transform: translateY(-4px);
+        }
+
+        .why-icon {
+            width: 68px;
+            height: 68px;
+            background: linear-gradient(135deg, rgba(232, 146, 42, 0.14), rgba(244, 200, 66, 0.08));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--terracotta);
+            margin: 0 auto 1.2rem;
+        }
+
+        .why-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.1rem;
+            color: var(--brown);
+            margin-bottom: 0.5rem;
+        }
+
+        .why-desc {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            line-height: 1.65;
+        }
+
+        /* ─── STORY ─── */
+        #story {
+            background: var(--brown);
+            padding: 90px 5%;
+        }
+
+        .story-img {
+            width: 100%;
+            border-radius: 24px;
+            background: linear-gradient(160deg, #5A3520 0%, #C1542A 50%, #E8922A 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 3/4;
+            position: relative;
+            overflow: hidden;
+            font-size: 5rem;
+            color: rgba(255, 248, 238, 0.25);
+        }
+
+        .story-img-caption {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            right: 24px;
+            font-family: 'DM Serif Display', serif;
+            font-size: 1rem;
+            font-style: italic;
+            color: rgba(255, 248, 238, 0.7);
+            line-height: 1.5;
+        }
+
+        .story-accent {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: var(--saffron);
+            opacity: 0.12;
+        }
+
+        .story-content .section-label {
+            color: var(--saffron-light);
+        }
+
+        .story-content .section-title {
+            color: var(--cream);
+        }
+
+        .story-content p {
+            color: rgba(255, 248, 238, 0.72);
+            line-height: 1.82;
+            margin-bottom: 1.1rem;
+        }
+
+        .story-sig {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.35rem;
+            font-style: italic;
+            color: var(--saffron-light);
+            margin-top: 2rem;
+            padding-top: 1.4rem;
+            border-top: 1px solid rgba(255, 248, 238, 0.1);
+        }
+
+        /* ─── TESTIMONIALS (Swiper) ─── */
+        #testimonials {
+            background: #fff;
+            padding: 90px 5%;
+        }
+
+        .swiper-testi {
+            padding-bottom: 56px !important;
+        }
+
+        .testi-card {
+            background: var(--cream);
+            border-radius: 20px;
+            padding: 1.8rem;
+            border: 1.5px solid rgba(193, 84, 42, 0.1);
+            position: relative;
+            height: auto;
+        }
+
+        .testi-quote-mark {
+            font-family: 'DM Serif Display', serif;
+            font-size: 3.5rem;
+            line-height: 1;
+            color: var(--saffron);
+            opacity: 0.35;
+            margin-bottom: 0.3rem;
+        }
+
+        .testi-text {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            line-height: 1.72;
+            font-style: italic;
+            margin-bottom: 1.2rem;
+        }
+
+        .testi-stars {
+            color: var(--gold);
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .testi-author {
+            font-weight: 600;
+            color: var(--brown);
+            font-size: 0.9rem;
+        }
+
+        .testi-location {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        /* Swiper pagination override */
+        .swiper-pagination-bullet {
+            background: var(--saffron) !important;
+            opacity: 0.35;
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: 1 !important;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: var(--terracotta) !important;
+            background: rgba(255, 248, 238, 0.9);
+            width: 42px !important;
+            height: 42px !important;
+            border-radius: 50%;
+            border: 1.5px solid rgba(193, 84, 42, 0.15);
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: 0.9rem !important;
+            font-weight: 700;
+        }
+
+        /* ─── GALLERY ─── */
+        #gallery {
+            background: var(--cream-dark);
+            padding: 90px 5%;
+        }
+
+        /* CSS Grid masonry layout */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 180px 180px 200px;
+            gap: 14px;
+            margin-top: 2.5rem;
+        }
+
+        /* Slot assignments */
+        .gi-1 {
+            grid-column: 1 / 6;
+            grid-row: 1 / 3;
+        }
+
+        /* tall left */
+        .gi-2 {
+            grid-column: 6 / 9;
+            grid-row: 1 / 2;
+        }
+
+        /* top mid-small */
+        .gi-3 {
+            grid-column: 9 / 13;
+            grid-row: 1 / 2;
+        }
+
+        /* top right */
+        .gi-4 {
+            grid-column: 6 / 9;
+            grid-row: 2 / 3;
+        }
+
+        /* mid center */
+        .gi-5 {
+            grid-column: 9 / 13;
+            grid-row: 2 / 3;
+        }
+
+        /* mid right */
+        .gi-6 {
+            grid-column: 1 / 13;
+            grid-row: 3 / 4;
+        }
+
+        /* full-width bottom */
+
+        .gallery-item {
+            border-radius: 18px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        /* Inner wrapper fills cell and clips on zoom */
+        .gallery-inner {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            transition: transform 0.45s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+        }
+
+        .gallery-item:hover .gallery-inner {
+            transform: scale(1.06);
+        }
+
+        /* Icon circle */
+        .gallery-icon-wrap {
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            color: rgba(255, 255, 255, 0.85);
+            transition: background 0.3s, transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        .gallery-item:hover .gallery-icon-wrap {
+            background: rgba(255, 255, 255, 0.25);
+            transform: scale(1.1);
+        }
+
+        /* Always-visible caption on thumb */
+        .gallery-caption {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.82);
+            font-style: italic;
+            text-align: center;
+            letter-spacing: 0.02em;
+            padding: 0 1rem;
+            line-height: 1.4;
+        }
+
+        .gi-6 .gallery-caption {
+            font-size: 1.2rem;
+        }
+
+        .gi-1 .gallery-caption {
+            font-size: 1.1rem;
+        }
+
+        /* Hover full overlay with label */
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(44, 26, 14, 0);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            padding: 1.2rem 1.4rem;
+            transition: background 0.35s;
+            border-radius: 18px;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            background: rgba(44, 26, 14, 0.52);
+        }
+
+        .gallery-tag {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            background: var(--saffron);
+            color: #fff;
+            border-radius: 50px;
+            padding: 3px 10px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s 0.05s;
+        }
+
+        .gallery-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            font-family: 'DM Serif Display', serif;
+            margin-top: 5px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s 0.1s;
+        }
+
+        .gallery-label small {
+            display: block;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 2px;
+            font-style: normal;
+        }
+
+        .gallery-item:hover .gallery-tag,
+        .gallery-item:hover .gallery-label {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Gradient backgrounds — richer, multi-stop */
+        .g1 {
+            background: linear-gradient(145deg, #B84020 0%, #C1542A 40%, #E8922A 100%);
+        }
+
+        .g2 {
+            background: linear-gradient(145deg, #1B5E40 0%, #2D6A4F 50%, #52B788 100%);
+        }
+
+        .g3 {
+            background: linear-gradient(145deg, #7A3018 0%, #A03A22 50%, #C1542A 100%);
+        }
+
+        .g4 {
+            background: linear-gradient(145deg, #C17A10 0%, #E8922A 55%, #F9B85A 100%);
+        }
+
+        .g5 {
+            background: linear-gradient(145deg, #1A0E06 0%, #2C1A0E 50%, #5A3520 100%);
+        }
+
+        .g6 {
+            background: linear-gradient(160deg, #1B3D2A 0%, #2D6A4F 50%, #1A4030 100%);
+        }
+
+        /* Responsive: collapse to 2-col on tablet, 1-col on mobile */
+        @media (max-width: 900px) {
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: repeat(4, 180px) 140px;
+            }
+
+            .gi-1 {
+                grid-column: 1 / 2;
+                grid-row: 1 / 3;
+            }
+
+            .gi-2 {
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+            }
+
+            .gi-3 {
+                grid-column: 2 / 3;
+                grid-row: 2 / 3;
+            }
+
+            .gi-4 {
+                grid-column: 1 / 2;
+                grid-row: 3 / 4;
+            }
+
+            .gi-5 {
+                grid-column: 2 / 3;
+                grid-row: 3 / 4;
+            }
+
+            .gi-6 {
+                grid-column: 1 / 3;
+                grid-row: 4 / 5;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(6, 160px);
+            }
+
+            .gi-1,
+            .gi-2,
+            .gi-3,
+            .gi-4,
+            .gi-5,
+            .gi-6 {
+                grid-column: 1 / 2;
+                grid-row: auto;
+            }
+        }
+
+        /* ─── CONTACT ─── */
+        #contact {
+            background: linear-gradient(135deg, var(--terracotta-dark) 0%, var(--terracotta) 60%, #D4651A 100%);
+            padding: 90px 5%;
+        }
+
+        .contact-info .section-label {
+            color: rgba(255, 248, 238, 0.6);
+        }
+
+        .contact-info .section-title {
+            color: var(--cream);
+        }
+
+        .contact-info p {
+            color: rgba(255, 248, 238, 0.78);
+            line-height: 1.75;
+            margin-bottom: 1.8rem;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 1.1rem;
+            color: rgba(255, 248, 238, 0.82);
+        }
+
+        .contact-icon {
+            width: 38px;
+            height: 38px;
+            flex-shrink: 0;
+            background: rgba(255, 248, 238, 0.12);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: var(--saffron-light);
+        }
+
+        .contact-detail-text {
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+
+        .contact-detail strong {
+            display: block;
+            color: var(--cream);
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            color: #fff;
+            text-decoration: none;
+            padding: 13px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-top: 1.4rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.32);
+        }
+
+        .whatsapp-btn:hover {
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.44);
+        }
+
+        .contact-form-wrap {
+            background: rgba(255, 248, 238, 0.1);
+            border: 1.5px solid rgba(255, 248, 238, 0.18);
+            border-radius: 24px;
+            padding: 2.4rem;
+            backdrop-filter: blur(8px);
+        }
+
+        .contact-form-wrap .form-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.4rem;
+            color: var(--cream);
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label-custom {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: rgba(255, 248, 238, 0.68);
+            margin-bottom: 5px;
+            letter-spacing: 0.04em;
+        }
+
+        .form-ctrl {
+            width: 100%;
+            padding: 11px 15px;
+            border-radius: 11px;
+            border: 1.5px solid rgba(255, 248, 238, 0.18);
+            background: rgba(255, 248, 238, 0.1);
+            color: var(--cream);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.88rem;
+            outline: none;
+            transition: border-color 0.2s, background 0.2s;
+            margin-bottom: 1rem;
+        }
+
+        .form-ctrl::placeholder {
+            color: rgba(255, 248, 238, 0.38);
+        }
+
+        .form-ctrl:focus {
+            border-color: var(--gold);
+            background: rgba(255, 248, 238, 0.14);
+        }
+
+        textarea.form-ctrl {
+            resize: vertical;
+            min-height: 96px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--gold);
+            color: var(--brown);
+            border: none;
+            cursor: pointer;
+            padding: 13px;
+            border-radius: 12px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.92rem;
+            font-weight: 700;
+            transition: background 0.2s, transform 0.15s;
+            margin-top: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-submit:hover {
+            background: var(--saffron-light);
+            transform: translateY(-1px);
+        }
+
+        /* ─── FOOTER ─── */
+        footer {
+            background: var(--brown);
+            color: rgba(255, 248, 238, 0.65);
+            padding: 60px 5% 0;
+        }
+
+        .footer-brand-name {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.2rem;
+            color: var(--cream);
+            margin: 10px 0 6px;
+        }
+
+        .footer-tagline {
+            font-size: 0.84rem;
+            font-style: italic;
+            color: rgba(255, 248, 238, 0.45);
+            margin-bottom: 1.2rem;
+        }
+
+        .social-btn {
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 248, 238, 0.07);
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: rgba(255, 248, 238, 0.65);
+            border: 1px solid rgba(255, 248, 238, 0.1);
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+            margin-right: 6px;
+        }
+
+        .social-btn:hover {
+            background: rgba(255, 248, 238, 0.14);
+            color: var(--cream);
+        }
+
+        .footer-col h4 {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--saffron-light);
+            margin-bottom: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.55rem;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255, 248, 238, 0.55);
+            text-decoration: none;
+            font-size: 0.86rem;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--cream);
+        }
+
+        .footer-divider {
+            border-color: rgba(255, 248, 238, 0.08);
+            margin: 0;
+        }
+
+        .footer-bottom {
+            padding: 18px 0;
+            font-size: 0.78rem;
+            color: rgba(255, 248, 238, 0.3);
+        }
+
+        /* ─── SCROLL ANIMATIONS ─── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal:nth-child(2) {
+            transition-delay: 0.08s;
+        }
+
+        .reveal:nth-child(3) {
+            transition-delay: 0.16s;
+        }
+
+        .reveal:nth-child(4) {
+            transition-delay: 0.24s;
+        }
+
+        .reveal:nth-child(5) {
+            transition-delay: 0.32s;
+        }
+
+        .reveal:nth-child(6) {
+            transition-delay: 0.40s;
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 991px) {
+            #hero {
+                grid-template-columns: 1fr;
+                padding-top: 100px;
+            }
+
+            .hero-visual {
+                order: -1;
+            }
+
+            .hero-img-card {
+                max-width: 100%;
+            }
+
+            .story-img {
+                aspect-ratio: 16/9;
+            }
+        }
+
+        @media (max-width: 767px) {
+            section {
+                padding: 60px 5% !important;
+            }
+
+            #story,
+            #contact {
+                padding: 60px 5% !important;
+            }
+
+            footer {
+                padding: 50px 5% 0 !important;
+            }
+
+            .hero-title {
+                font-size: 2.8rem;
+            }
+
+            .nav-desktop {
+                display: none !important;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .nav-toggler {
+                display: none !important;
+            }
+
+            .mobile-nav {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav id="navbar">
+        <a href="#hero" class="nav-logo">
+            <div class="nav-logo-icon">
+                <i class="bi bi-droplet-fill"></i>
+            </div>
+            <div class="nav-logo-text">
+                Maa Khodiyar Dairy
+                <small>Pure · Fresh · Trusted</small>
+            </div>
+        </a>
+
+        <ul class="nav-links nav-desktop">
+            <li><a href="#hero"><i class="bi bi-house me-1"></i>Home</a></li>
+            <li><a href="#products"><i class="bi bi-grid me-1"></i>Products</a></li>
+            <li><a href="#why"><i class="bi bi-patch-check me-1"></i>Why Us</a></li>
+            <li><a href="#gallery"><i class="bi bi-images me-1"></i>Gallery</a></li>
+            <li><a href="#contact"><i class="bi bi-telephone me-1"></i>Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-3">
+            <a href="https://wa.me/919999999999" class="btn-saffron nav-desktop">
+                <i class="bi bi-bag-check"></i> Order Now
+            </a>
+            <button class="navbar-toggler nav-toggler" id="hamburger" aria-label="Toggle menu">
+                <i class="bi bi-list" id="ham-icon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#hero"><i class="bi bi-house"></i> Home</a>
+        <a href="#products"><i class="bi bi-grid"></i> Products</a>
+        <a href="#why"><i class="bi bi-patch-check"></i> Why Us</a>
+        <a href="#gallery"><i class="bi bi-images"></i> Gallery</a>
+        <a href="#contact"><i class="bi bi-telephone"></i> Contact</a>
+        <a href="https://wa.me/919999999999" class="btn-saffron mt-1" style="width:fit-content">
+            <i class="bi bi-whatsapp"></i> Order on WhatsApp
+        </a>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+        <svg class="hero-mandala" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="200" cy="200" r="190" fill="none" stroke="#C1542A" stroke-width="1.5" />
+            <circle cx="200" cy="200" r="150" fill="none" stroke="#C1542A" stroke-width="1" />
+            <circle cx="200" cy="200" r="110" fill="none" stroke="#C1542A" stroke-width="1.5" />
+            <circle cx="200" cy="200" r="70" fill="none" stroke="#C1542A" stroke-width="1" />
+            <circle cx="200" cy="200" r="30" fill="none" stroke="#C1542A" stroke-width="1.5" />
+            <line x1="200" y1="10" x2="200" y2="390" stroke="#C1542A" stroke-width="0.8" />
+            <line x1="10" y1="200" x2="390" y2="200" stroke="#C1542A" stroke-width="0.8" />
+            <line x1="65" y1="65" x2="335" y2="335" stroke="#C1542A" stroke-width="0.8" />
+            <line x1="335" y1="65" x2="65" y2="335" stroke="#C1542A" stroke-width="0.8" />
+            <polygon points="200,50 240,140 200,130 160,140" fill="none" stroke="#C1542A" stroke-width="0.8" />
+            <polygon points="200,350 240,260 200,270 160,260" fill="none" stroke="#C1542A" stroke-width="0.8" />
+            <polygon points="50,200 140,240 130,200 140,160" fill="none" stroke="#C1542A" stroke-width="0.8" />
+            <polygon points="350,200 260,240 270,200 260,160" fill="none" stroke="#C1542A" stroke-width="0.8" />
+        </svg>
+
+        <div class="hero-content animate__animated animate__fadeInLeft">
+            <div class="hero-stamp">
+                <i class="bi bi-house-heart-fill"></i> Serving Fresh Since 1998
+            </div>
+            <h1 class="hero-title">
+                Pure. Fresh.
+                <em>Straight from<br>the farm.</em>
+            </h1>
+            <p class="hero-sub">Experience the rich, authentic taste of farm-fresh milk and handmade dairy products
+                delivered to your doorstep every morning, continuing a family tradition of purity.</p>
+            <div class="d-flex gap-3 flex-wrap">
+                <a href="#products" class="btn-saffron">
+                    <i class="bi bi-grid-fill"></i> Explore Products
+                </a>
+                <a href="#story" class="btn-ghost">
+                    <i class="bi bi-book"></i> Our Story
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-visual animate__animated animate__fadeInRight">
+            <div class="hero-img-card">
+                <div class="hero-img-inner">
+                    <i class="bi bi-droplet-fill hero-img-icon"></i>
+                    <div class="hero-img-label">Farm-Fresh<br>Every Morning</div>
+                </div>
+            </div>
+            <div class="hero-float-badge">
+                <strong>100%</strong>
+                Pure A2 Milk<br>No Preservatives
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee-strip">
+        <div class="marquee-inner">
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-droplet-fill me-1"></i>Farm Fresh
+                Milk</div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-jar-fill me-1"></i>Pure Desi Ghee
+            </div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-box-fill me-1"></i>Homemade
+                Paneer</div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-award-fill me-1"></i>A2 Milk
+            </div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-shield-check me-1"></i>No
+                Preservatives</div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-truck me-1"></i>Daily Home
+                Delivery</div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-cup-fill me-1"></i>Fresh Dahi
+                &amp; Lassi</div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-stars me-1"></i>Pure White Butter
+            </div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-droplet-fill me-1"></i>Farm Fresh
+                Milk</div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-jar-fill me-1"></i>Pure Desi Ghee
+            </div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-box-fill me-1"></i>Homemade
+                Paneer</div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-award-fill me-1"></i>A2 Milk
+            </div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-shield-check me-1"></i>No
+                Preservatives</div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-truck me-1"></i>Daily Home
+                Delivery</div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-cup-fill me-1"></i>Fresh Dahi
+                &amp; Lassi</div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-stars me-1"></i>Pure White Butter
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== PRODUCTS ===== -->
+    <section id="products">
+        <div class="section-label">What We Make</div>
+        <h2 class="section-title">Fresh From Our Dairy,<br>Daily To Your Home</h2>
+        <div class="divider-line"></div>
+        <p class="section-sub mb-5">Handcrafted with love, strictly avoiding machines where hands do it better. Pure,
+            unadulterated goodness — just as nature intended.</p>
+
+        <div class="row g-4">
+            <div class="col-6 col-md-4 col-lg-2 reveal">
+                <div class="product-card">
+                    <div class="product-tag">Daily</div>
+                    <div class="product-icon-wrap"><i class="bi bi-droplet-fill"></i></div>
+                    <div class="product-name">Taza Doodh</div>
+                    <p class="product-desc">Fresh raw cow milk delivered within hours of milking. Rich in nutrients and
+                        natural flavour.</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 reveal">
+                <div class="product-card">
+                    <div class="product-tag">Daily</div>
+                    <div class="product-icon-wrap"><i class="bi bi-jar-fill"></i></div>
+                    <div class="product-name">Desi Ghee</div>
+                    <p class="product-desc">Traditional Bilona churned ghee from A2 cow milk curd. Aromatic, golden and
+                        pure.</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 reveal">
+                <div class="product-card">
+                    <div class="product-tag">Daily</div>
+                    <div class="product-icon-wrap"><i class="bi bi-box-fill"></i></div>
+                    <div class="product-name">Malai Paneer</div>
+                    <p class="product-desc">Soft, melt-in-mouth cottage cheese made fresh every morning without
+                        additives.</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 reveal">
+                <div class="product-card">
+                    <div class="product-tag">Daily</div>
+                    <div class="product-icon-wrap"><i class="bi bi-cup-fill"></i></div>
+                    <div class="product-name">Dahi &amp; Lassi</div>
+                    <p class="product-desc">Thick creamy set curd and refreshing lassi, made with live cultures every
+                        day.</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 reveal">
+                <div class="product-card">
+                    <div class="product-tag">Daily</div>
+                    <div class="product-icon-wrap"><i class="bi bi-snow3"></i></div>
+                    <div class="product-name">White Makhan</div>
+                    <p class="product-desc">Hand-churned fresh white butter from full-cream milk. The kind your
+                        grandmother made.</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 reveal">
+                <div class="product-card">
+                    <div class="product-tag">Seasonal</div>
+                    <div class="product-icon-wrap"><i class="bi bi-stars"></i></div>
+                    <div class="product-name">Shrikhand &amp; Rabdi</div>
+                    <p class="product-desc">Festive sweets from hung curd and thickened milk, available during
+                        celebrations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY US ===== -->
+    <section id="why">
+        <div class="section-label">The Difference</div>
+        <h2 class="section-title">Why Families Trust<br>Maa Khodiyar Dairy</h2>
+        <div class="divider-line"></div>
+        <div class="row g-4 mt-1">
+            <div class="col-6 col-lg-3 reveal">
+                <div class="why-card">
+                    <div class="why-icon"><i class="bi bi-leaf-fill"></i></div>
+                    <div class="why-title">100% Natural</div>
+                    <p class="why-desc">No artificial additives, no preservatives, no adulteration. Pure dairy exactly
+                        as it comes from healthy, happy cows.</p>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 reveal">
+                <div class="why-card">
+                    <div class="why-icon"><i class="bi bi-sunrise-fill"></i></div>
+                    <div class="why-title">Fresh Every Morning</div>
+                    <p class="why-desc">Products made at 4 AM and dispatched by 6 AM. By the time you wake up, it's
+                        already at your door.</p>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 reveal">
+                <div class="why-card">
+                    <div class="why-icon"><i class="bi bi-truck-front-fill"></i></div>
+                    <div class="why-title">Doorstep Delivery</div>
+                    <p class="why-desc">Subscriptions delivered reliably every morning, seven days a week. No trips to
+                        the store needed.</p>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 reveal">
+                <div class="why-card">
+                    <div class="why-icon"><i class="bi bi-heart-fill"></i></div>
+                    <div class="why-title">Family-Trusted</div>
+                    <p class="why-desc">Over 500 families in Surat have trusted us for 25+ years. That loyalty is
+                        earned, not bought.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STORY ===== -->
+    <section id="story">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-5 reveal">
+                <div class="story-img" style="position:relative;">
+                    <i class="bi bi-droplet-fill" style="font-size:6rem;"></i>
+                    <div class="story-img-caption">"Purity is not just a quality standard — it's a family value."</div>
+                    <div class="story-accent"></div>
+                </div>
+            </div>
+            <div class="col-lg-7 story-content reveal">
+                <div class="section-label">Our Story</div>
+                <h2 class="section-title">A family tradition,<br>bottled fresh every day.</h2>
+                <div class="divider-line" style="background: linear-gradient(90deg,var(--saffron),var(--gold));"></div>
+                <p>Maa Khodiyar Dairy was founded in 1998 by our family with a simple belief: every family deserves milk
+                    that is as pure and nourishing as what comes straight from a healthy cow. What started as a small
+                    operation with two cows has grown into a trusted neighbourhood dairy, but the values have never
+                    changed.</p>
+                <p>We name our dairy after Maa Khodiyar — the mother goddess who symbolises care, protection, and
+                    abundance — because that is what we aspire to bring into every home: nourishment that feels like a
+                    mother's love.</p>
+                <p>Every drop of milk, every block of paneer, every jar of ghee carries 25 years of dedication, early
+                    mornings, and honest work. We know your family by name, and we take that responsibility seriously.
+                </p>
+                <div class="story-sig">— The Khodiyar Dairy Family <i class="bi bi-heart-fill"
+                        style="color:var(--saffron-light);font-size:0.9rem;"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS (Swiper) ===== -->
+    <section id="testimonials">
+        <div class="section-label">What People Say</div>
+        <h2 class="section-title">Loved by Families<br>Across the City</h2>
+        <div class="divider-line"></div>
+
+        <div class="swiper swiper-testi mt-4">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="testi-card">
+                        <div class="testi-quote-mark">"</div>
+                        <p class="testi-text">The milk is so rich and fresh — my kids have started actually enjoying
+                            their morning glass. The paneer melts in your mouth. Nothing like the store-bought stuff.
+                        </p>
+                        <div class="testi-stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="testi-author"><i class="bi bi-person-fill me-1"></i>Priya Mehta</div>
+                        <div class="testi-location"><i class="bi bi-geo-alt me-1"></i>Katargam, Surat</div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="testi-card">
+                        <div class="testi-quote-mark">"</div>
+                        <p class="testi-text">I have been getting doodh from them for 12 years. Never a single miss on
+                            delivery. The ghee they make is exactly like what my mother used to prepare at home.</p>
+                        <div class="testi-stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="testi-author"><i class="bi bi-person-fill me-1"></i>Rameshbhai Patel</div>
+                        <div class="testi-location"><i class="bi bi-geo-alt me-1"></i>Varachha, Surat</div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="testi-card">
+                        <div class="testi-quote-mark">"</div>
+                        <p class="testi-text">We use their milk for our sweet shop and customers can always tell the
+                            difference. The fat content, the freshness, the taste — simply unbeatable at this price.</p>
+                        <div class="testi-stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="testi-author"><i class="bi bi-person-fill me-1"></i>Jayesh Adesara</div>
+                        <div class="testi-location"><i class="bi bi-geo-alt me-1"></i>Adajan, Surat</div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="testi-card">
+                        <div class="testi-quote-mark">"</div>
+                        <p class="testi-text">Best dahi in all of Surat — no doubt. Thick like malai, sour just enough.
+                            My family refuses to eat curd from anywhere else now. Truly blessed to have them nearby.</p>
+                        <div class="testi-stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="testi-author"><i class="bi bi-person-fill me-1"></i>Komal Desai</div>
+                        <div class="testi-location"><i class="bi bi-geo-alt me-1"></i>Citylight, Surat</div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="testi-card">
+                        <div class="testi-quote-mark">"</div>
+                        <p class="testi-text">Their ghee has changed everything in my kitchen. You can smell the
+                            difference when it hits the pan. Pure, rich, golden — exactly how it should be. Highly
+                            recommended.</p>
+                        <div class="testi-stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-half"></i>
+                        </div>
+                        <div class="testi-author"><i class="bi bi-person-fill me-1"></i>Naresh Shah</div>
+                        <div class="testi-location"><i class="bi bi-geo-alt me-1"></i>Piplod, Surat</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section id="gallery">
+        <div class="d-flex align-items-end justify-content-between flex-wrap gap-3">
+            <div>
+                <div class="section-label">Gallery</div>
+                <h2 class="section-title">From Our Farm<br>To Your Table</h2>
+                <div class="divider-line"></div>
+            </div>
+            <p class="section-sub" style="max-width:320px; margin-bottom: 2.2rem;">Hover over each card to explore our
+                dairy process — from the farm to your family's table.</p>
+        </div>
+
+        <div class="gallery-grid">
+
+            <!-- 1: Tall left — cows -->
+            <div class="gallery-item gi-1">
+                <div class="gallery-inner g1">
+                    <div class="gallery-icon-wrap">
+                        <i class="bi bi-droplet-fill"></i>
+                    </div>
+                    <div class="gallery-caption">Our Happy<br>Cows</div>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="gallery-tag"><i class="bi bi-camera me-1"></i>Farm</div>
+                    <div class="gallery-label">
+                        Our Happy Cows
+                        <small>Healthy cows, pure milk — always</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2: Top mid — milk -->
+            <div class="gallery-item gi-2">
+                <div class="gallery-inner g2">
+                    <div class="gallery-icon-wrap">
+                        <i class="bi bi-cup-fill"></i>
+                    </div>
+                    <div class="gallery-caption">Fresh Morning Milk</div>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="gallery-tag"><i class="bi bi-camera me-1"></i>Dairy</div>
+                    <div class="gallery-label">
+                        Fresh Morning Milk
+                        <small>Delivered within hours of milking</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3: Top right — ghee -->
+            <div class="gallery-item gi-3">
+                <div class="gallery-inner g3">
+                    <div class="gallery-icon-wrap">
+                        <i class="bi bi-jar-fill"></i>
+                    </div>
+                    <div class="gallery-caption">Bilona Ghee Process</div>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="gallery-tag"><i class="bi bi-camera me-1"></i>Process</div>
+                    <div class="gallery-label">
+                        Bilona Ghee
+                        <small>Traditional hand-churned method</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4: Mid center — paneer -->
+            <div class="gallery-item gi-4">
+                <div class="gallery-inner g4">
+                    <div class="gallery-icon-wrap">
+                        <i class="bi bi-box-fill"></i>
+                    </div>
+                    <div class="gallery-caption">Freshly Set Paneer</div>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="gallery-tag"><i class="bi bi-camera me-1"></i>Product</div>
+                    <div class="gallery-label">
+                        Malai Paneer
+                        <small>Made fresh each morning</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5: Mid right — 4am -->
+            <div class="gallery-item gi-5">
+                <div class="gallery-inner g5">
+                    <div class="gallery-icon-wrap">
+                        <i class="bi bi-sunrise-fill"></i>
+                    </div>
+                    <div class="gallery-caption">4 AM — The Work Begins</div>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="gallery-tag"><i class="bi bi-camera me-1"></i>Behind the Scenes</div>
+                    <div class="gallery-label">
+                        Before Sunrise
+                        <small>Every single day, without exception</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6: Full-width bottom — shop -->
+            <div class="gallery-item gi-6">
+                <div class="gallery-inner g6" style="flex-direction:row; justify-content:center; gap:2rem;">
+                    <div class="gallery-icon-wrap" style="width:80px;height:80px;font-size:2.2rem;">
+                        <i class="bi bi-shop-window"></i>
+                    </div>
+                    <div>
+                        <div class="gallery-caption" style="text-align:left; font-size:1.4rem;">Our Dairy Shop</div>
+                        <div
+                            style="font-family:'DM Sans',sans-serif; font-size:0.82rem; color:rgba(255,255,255,0.6); margin-top:4px;">
+                            <i class="bi bi-geo-alt-fill me-1" style="color:var(--saffron-light);"></i>Varachha Road,
+                            Surat &nbsp;·&nbsp;
+                            <i class="bi bi-clock me-1" style="color:var(--saffron-light);"></i>6AM–10AM | 4PM–8PM
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="gallery-tag"><i class="bi bi-camera me-1"></i>Our Shop</div>
+                    <div class="gallery-label">
+                        Visit Us in Surat
+                        <small>Near Khodiyar Mata Mandir, Varachha Road</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+        <div class="row g-5">
+            <div class="col-lg-6 contact-info reveal">
+                <div class="section-label">Order &amp; Enquiries</div>
+                <h2 class="section-title" style="color:var(--cream);">Order Fresh<br>Every Morning</h2>
+                <div class="divider-line" style="background: linear-gradient(90deg,var(--gold),var(--saffron-light));">
+                </div>
+                <p>The easiest way to order is on WhatsApp. Tell us what you need and we will have it at your door
+                    before sunrise.</p>
+
+                <div class="contact-detail">
+                    <div class="contact-icon"><i class="bi bi-telephone-fill"></i></div>
+                    <div class="contact-detail-text">
+                        <strong>Call or WhatsApp</strong>
+                        +91 99999 99999
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="contact-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                    <div class="contact-detail-text">
+                        <strong>Shop Address</strong>
+                        Near Khodiyar Mata Mandir, Varachha Road, Surat, Gujarat
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="contact-icon"><i class="bi bi-clock-fill"></i></div>
+                    <div class="contact-detail-text">
+                        <strong>Shop Timings</strong>
+                        6:00 AM – 10:00 AM &nbsp;|&nbsp; 4:00 PM – 8:00 PM
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="contact-icon"><i class="bi bi-truck-front-fill"></i></div>
+                    <div class="contact-detail-text">
+                        <strong>Delivery Areas</strong>
+                        Varachha · Katargam · Adajan · Citylight · Piplod
+                    </div>
+                </div>
+
+                <a href="https://wa.me/919999999999" class="whatsapp-btn">
+                    <i class="bi bi-whatsapp" style="font-size:1.1rem;"></i> Chat on WhatsApp
+                </a>
+            </div>
+
+            <div class="col-lg-6 reveal">
+                <div class="contact-form-wrap">
+                    <div class="form-title"><i class="bi bi-envelope-fill me-2" style="color:var(--gold);"></i>Send a
+                        Message</div>
+                    <label class="form-label-custom">Your Name</label>
+                    <input type="text" class="form-ctrl" placeholder="Rameshbhai Patel">
+                    <label class="form-label-custom">Phone Number</label>
+                    <input type="tel" class="form-ctrl" placeholder="+91 98765 43210">
+                    <label class="form-label-custom">What do you need?</label>
+                    <textarea class="form-ctrl"
+                        placeholder="e.g. 2L milk and 500g paneer daily from Monday..."></textarea>
+                    <button class="btn-submit" onclick="alert('Thank you! We will contact you soon on WhatsApp. 🙏')">
+                        <i class="bi bi-send-fill"></i> Send Message
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="row g-4 pb-5">
+            <div class="col-12 col-md-5 col-lg-4">
+                <div class="d-flex align-items-center gap-2">
+                    <div class="nav-logo-icon"><i class="bi bi-droplet-fill"></i></div>
+                </div>
+                <div class="footer-brand-name mt-2">Maa Khodiyar Dairy</div>
+                <div class="footer-tagline">"Pure milk. Pure love."</div>
+                <div class="d-flex gap-2 mt-1">
+                    <a href="#" class="social-btn" title="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="social-btn" title="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="https://wa.me/919999999999" class="social-btn" title="WhatsApp"><i
+                            class="bi bi-whatsapp"></i></a>
+                    <a href="tel:+919999999999" class="social-btn" title="Call"><i class="bi bi-telephone-fill"></i></a>
+                </div>
+            </div>
+            <div class="col-6 col-md-2 col-lg-2 footer-col">
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="#hero"><i class="bi bi-chevron-right"></i>Home</a></li>
+                    <li><a href="#products"><i class="bi bi-chevron-right"></i>Products</a></li>
+                    <li><a href="#why"><i class="bi bi-chevron-right"></i>Why Us</a></li>
+                    <li><a href="#story"><i class="bi bi-chevron-right"></i>Our Story</a></li>
+                    <li><a href="#gallery"><i class="bi bi-chevron-right"></i>Gallery</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-2 col-lg-2 footer-col">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="#"><i class="bi bi-chevron-right"></i>Taza Doodh</a></li>
+                    <li><a href="#"><i class="bi bi-chevron-right"></i>Desi Ghee</a></li>
+                    <li><a href="#"><i class="bi bi-chevron-right"></i>Malai Paneer</a></li>
+                    <li><a href="#"><i class="bi bi-chevron-right"></i>Dahi &amp; Lassi</a></li>
+                    <li><a href="#"><i class="bi bi-chevron-right"></i>White Makhan</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-3 col-lg-4 footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="https://wa.me/919999999999"><i class="bi bi-whatsapp"></i>WhatsApp Order</a></li>
+                    <li><a href="tel:+919999999999"><i class="bi bi-telephone"></i>+91 99999 99999</a></li>
+                    <li><a href="#"><i class="bi bi-geo-alt"></i>Varachha Road, Surat</a></li>
+                    <li><a href="#"><i class="bi bi-clock"></i>6AM–10AM | 4PM–8PM</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <span><i class="bi bi-c-circle me-1"></i>2024 Maa Khodiyar Dairy. All rights reserved.</span>
+            <span><i class="bi bi-heart-fill me-1" style="color:var(--terracotta);"></i>Made with love in Surat,
+                Gujarat</span>
+        </div>
+    </footer>
+
+    <!-- ===== CDN SCRIPTS ===== -->
+    <!-- Bootstrap 5.3 JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper 11 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // ── Navbar scroll shadow
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // ── Mobile nav toggle
+        const hamBtn = document.getElementById('hamburger');
+        const hamIcon = document.getElementById('ham-icon');
+        const mobileNav = document.getElementById('mobileNav');
+        hamBtn.addEventListener('click', () => {
+            const open = mobileNav.classList.toggle('show');
+            hamIcon.className = open ? 'bi bi-x-lg' : 'bi bi-list';
+        });
+        mobileNav.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                mobileNav.classList.remove('show');
+                hamIcon.className = 'bi bi-list';
+            });
+        });
+
+        // ── Swiper Testimonials
+        new Swiper('.swiper-testi', {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            loop: true,
+            autoplay: { delay: 4500, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            breakpoints: {
+                640: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            }
+        });
+
+        // ── Scroll reveal
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+
+</html>

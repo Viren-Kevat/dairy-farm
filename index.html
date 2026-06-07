@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maa Khodiyar Dairy – Pure. Fresh. From the Farm.</title>
+
+    <!-- ===== CDN LINKS ===== -->
+    <!-- Google Fonts: DM Serif Display + DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons 1.11 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Swiper 11 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Animate.css 4 -->
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav id="navbar">
+        <a href="#hero" class="nav-logo">
+            <div class="nav-logo-icon">
+                <i class="bi bi-droplet-fill"></i>
+            </div>
+            <div class="nav-logo-text">
+                Maa Khodiyar Dairy
+                <small>Pure · Fresh · Trusted</small>
+            </div>
+        </a>
+
+        <ul class="nav-links nav-desktop">
+            <li><a href="#hero"><i class="bi bi-house me-1"></i>Home</a></li>
+            <li><a href="#products"><i class="bi bi-grid me-1"></i>Products</a></li>
+            <li><a href="#why"><i class="bi bi-patch-check me-1"></i>Why Us</a></li>
+            <li><a href="#gallery"><i class="bi bi-images me-1"></i>Gallery</a></li>
+            <li><a href="#contact"><i class="bi bi-telephone me-1"></i>Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-3">
+            <a href="https://wa.me/919999999999" class="btn-saffron nav-desktop">
+                <i class="bi bi-bag-check"></i> Order Now
+            </a>
+            <button class="navbar-toggler nav-toggler" id="hamburger" aria-label="Toggle menu">
+                <i class="bi bi-list" id="ham-icon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#hero"><i class="bi bi-house"></i> Home</a>
+        <a href="#products"><i class="bi bi-grid"></i> Products</a>
+        <a href="#why"><i class="bi bi-patch-check"></i> Why Us</a>
+        <a href="#gallery"><i class="bi bi-images"></i> Gallery</a>
+        <a href="#contact"><i class="bi bi-telephone"></i> Contact</a>
+        <a href="https://wa.me/919999999999" class="btn-saffron mt-1" style="width:fit-content">
+            <i class="bi bi-whatsapp"></i> Order on WhatsApp
+        </a>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+        <svg class="hero-mandala" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="200" cy="200" r="190" fill="none" stroke="#C1542A" stroke-width="1.5" />
+            <circle cx="200" cy="200" r="150" fill="none" stroke="#C1542A" stroke-width="1" />
+            <circle cx="200" cy="200" r="110" fill="none" stroke="#C1542A" stroke-width="1.5" />
+            <circle cx="200" cy="200" r="70" fill="none" stroke="#C1542A" stroke-width="1" />
+            <circle cx="200" cy="200" r="30" fill="none" stroke="#C1542A" stroke-width="1.5" />
+            <line x1="200" y1="10" x2="200" y2="390" stroke="#C1542A" stroke-width="0.8" />
+            <line x1="10" y1="200" x2="390" y2="200" stroke="#C1542A" stroke-width="0.8" />
+            <line x1="65" y1="65" x2="335" y2="335" stroke="#C1542A" stroke-width="0.8" />
+            <line x1="335" y1="65" x2="65" y2="335" stroke="#C1542A" stroke-width="0.8" />
+            <polygon points="200,50 240,140 200,130 160,140" fill="none" stroke="#C1542A" stroke-width="0.8" />
+            <polygon points="200,350 240,260 200,270 160,260" fill="none" stroke="#C1542A" stroke-width="0.8" />
+            <polygon points="50,200 140,240 130,200 140,160" fill="none" stroke="#C1542A" stroke-width="0.8" />
+            <polygon points="350,200 260,240 270,200 260,160" fill="none" stroke="#C1542A" stroke-width="0.8" />
+        </svg>
+        <div class="container">
+            <div class="hero-content animate__animated animate__fadeInLeft">
+                <div class="hero-stamp">
+                    <i class="bi bi-house-heart-fill"></i> Serving Fresh Since 1998
+                </div>
+                <h1 class="hero-title">
+                    Pure. Fresh.
+                    <em>Straight from<br>the farm.</em>
+                </h1>
+                <p class="hero-sub">Experience the rich, authentic taste of farm-fresh milk and handmade dairy products
+                    delivered to your doorstep every morning, continuing a family tradition of purity.</p>
+                <div class="d-flex gap-3 flex-wrap">
+                    <a href="#products" class="btn-saffron">
+                        <i class="bi bi-grid-fill"></i> Explore Products
+                    </a>
+                    <a href="#story" class="btn-ghost">
+                        <i class="bi bi-book"></i> Our Story
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual animate__animated animate__fadeInRight">
+                <div class="hero-img-card">
+                    <div class="hero-img-inner">
+                        <i class="bi bi-droplet-fill hero-img-icon"></i>
+                        <div class="hero-img-label">Farm-Fresh<br>Every Morning</div>
+                    </div>
+                </div>
+                <div class="hero-float-badge">
+                    <strong>100%</strong>
+                    Pure A2 Milk<br>No Preservatives
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee-strip">
+        <div class="marquee-inner">
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-droplet-fill me-1"></i>Farm Fresh
+                Milk</div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-jar-fill me-1"></i>Pure Desi Ghee
+            </div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-box-fill me-1"></i>Homemade
+                Paneer</div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-award-fill me-1"></i>A2 Milk
+            </div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-shield-check me-1"></i>No
+                Preservatives</div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-truck me-1"></i>Daily Home
+                Delivery</div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-cup-fill me-1"></i>Fresh Dahi
+                &amp; Lassi</div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-stars me-1"></i>Pure White Butter
+            </div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-droplet-fill me-1"></i>Farm Fresh
+                Milk</div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-jar-fill me-1"></i>Pure Desi Ghee
+            </div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-box-fill me-1"></i>Homemade
+                Paneer</div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-award-fill me-1"></i>A2 Milk
+            </div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-shield-check me-1"></i>No
+                Preservatives</div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-truck me-1"></i>Daily Home
+                Delivery</div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-cup-fill me-1"></i>Fresh Dahi
+                &amp; Lassi</div>
+            <div class="marquee-item"><span class="marquee-dot"></span><i class="bi bi-stars me-1"></i>Pure White Butter
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== PRODUCTS ===== -->
+    <section id="products">
+        <div class="container">
+            <div class="section-label">What We Make</div>
+            <h2 class="section-title">Fresh From Our Dairy,<br>Daily To Your Home</h2>
+            <div class="divider-line"></div>
+            <p class="section-sub mb-5">Handcrafted with love, strictly avoiding machines where hands do it better.
+                Pure,
+                unadulterated goodness — just as nature intended.</p>
+
+            <!-- Swiper -->
+            <div class="swiper swiper-products">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-tag">Daily</div>
+                            <div class="product-icon-wrap"><i class="bi bi-droplet-fill"></i></div>
+                            <div class="product-name">Taza Doodh</div>
+                            <p class="product-desc">Fresh raw cow milk delivered within hours of milking. Rich in
+                                nutrients
+                                and
+                                natural flavour.</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-tag">Daily</div>
+                            <div class="product-icon-wrap"><i class="bi bi-jar-fill"></i></div>
+                            <div class="product-name">Desi Ghee</div>
+                            <p class="product-desc">Traditional Bilona churned ghee from A2 cow milk curd. Aromatic,
+                                golden
+                                and
+                                pure.</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-tag">Daily</div>
+                            <div class="product-icon-wrap"><i class="bi bi-box-fill"></i></div>
+                            <div class="product-name">Malai Paneer</div>
+                            <p class="product-desc">Soft, melt-in-mouth cottage cheese made fresh every morning without
+                                additives.</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-tag">Daily</div>
+                            <div class="product-icon-wrap"><i class="bi bi-cup-fill"></i></div>
+                            <div class="product-name">Dahi &amp; Lassi</div>
+                            <p class="product-desc">Thick creamy set curd and refreshing lassi, made with live cultures
+                                every
+                                day.</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-tag">Daily</div>
+                            <div class="product-icon-wrap"><i class="bi bi-snow3"></i></div>
+                            <div class="product-name">White Makhan</div>
+                            <p class="product-desc">Hand-churned fresh white butter from full-cream milk. The kind your
+                                grandmother made.</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-tag">Seasonal</div>
+                            <div class="product-icon-wrap"><i class="bi bi-stars"></i></div>
+                            <div class="product-name">Shrikhand &amp; Rabdi</div>
+                            <p class="product-desc">Festive sweets from hung curd and thickened milk, available during
+                                celebrations.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY US ===== -->
+    <section id="why">
+        <div class="container">
+            <div class="section-label">The Difference</div>
+            <h2 class="section-title">Why Families Trust<br>Maa Khodiyar Dairy</h2>
+            <div class="divider-line"></div>
+            <div class="row g-4 mt-1">
+                <div class="col-6 col-lg-3 reveal">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="bi bi-leaf-fill"></i></div>
+                        <div class="why-title">100% Natural</div>
+                        <p class="why-desc">No artificial additives, no preservatives, no adulteration. Pure dairy
+                            exactly
+                            as it comes from healthy, happy cows.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 reveal">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="bi bi-sunrise-fill"></i></div>
+                        <div class="why-title">Fresh Every Morning</div>
+                        <p class="why-desc">Products made at 4 AM and dispatched by 6 AM. By the time you wake up, it's
+                            already at your door.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 reveal">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="bi bi-truck-front-fill"></i></div>
+                        <div class="why-title">Doorstep Delivery</div>
+                        <p class="why-desc">Subscriptions delivered reliably every morning, seven days a week. No trips
+                            to
+                            the store needed.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 reveal">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="bi bi-heart-fill"></i></div>
+                        <div class="why-title">Family-Trusted</div>
+                        <p class="why-desc">Over 500 families in Navsari have trusted us for 25+ years. That loyalty is
+                            earned, not bought.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ===== STORY ===== -->
+    <section id="story">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 reveal">
+                    <div class="story-img" style="position:relative;">
+                        <i class="bi bi-droplet-fill" style="font-size:6rem;"></i>
+                        <div class="story-img-caption">"Purity is not just a quality standard — it's a family value."
+                        </div>
+                        <div class="story-accent"></div>
+                    </div>
+                </div>
+                <div class="col-lg-7 story-content reveal">
+                    <div class="section-label">Our Story</div>
+                    <h2 class="section-title">A family tradition,<br>bottled fresh every day.</h2>
+                    <div class="divider-line" style="background: linear-gradient(90deg,var(--saffron),var(--gold));">
+                    </div>
+                    <p>Maa Khodiyar Dairy was founded in 1998 by our family with a simple belief: every family deserves
+                        milk
+                        that is as pure and nourishing as what comes straight from a healthy cow. What started as a
+                        small
+                        operation with two cows has grown into a trusted neighbourhood dairy, but the values have never
+                        changed.</p>
+                    <p>We name our dairy after Maa Khodiyar — the mother goddess who symbolises care, protection, and
+                        abundance — because that is what we aspire to bring into every home: nourishment that feels like
+                        a
+                        mother's love.</p>
+                    <p>Every drop of milk, every block of paneer, every jar of ghee carries 25 years of dedication,
+                        early
+                        mornings, and honest work. We know your family by name, and we take that responsibility
+                        seriously.
+                    </p>
+                    <div class="story-sig">— The Khodiyar Dairy Family <i class="bi bi-heart-fill"
+                            style="color:var(--saffron-light);font-size:0.9rem;"></i></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ===== TESTIMONIALS (Swiper) ===== -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="section-label">What People Say</div>
+            <h2 class="section-title">Loved by Families<br>Across the City</h2>
+            <div class="divider-line"></div>
+
+            <div class="swiper swiper-testi mt-4">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="testi-card">
+                            <div class="testi-quote-mark">"</div>
+                            <p class="testi-text">The milk is so rich and fresh — my kids have started actually enjoying
+                                their morning glass. The paneer melts in your mouth. Nothing like the store-bought
+                                stuff.
+                            </p>
+                            <div class="testi-stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="testi-author"><i class="bi bi-person-fill me-1"></i>Priya Mehta</div>
+                            <div class="testi-location"><i class="bi bi-geo-alt me-1"></i>Katargam, Surat</div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="testi-card">
+                            <div class="testi-quote-mark">"</div>
+                            <p class="testi-text">I have been getting doodh from them for 12 years. Never a single miss
+                                on
+                                delivery. The ghee they make is exactly like what my mother used to prepare at home.</p>
+                            <div class="testi-stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="testi-author"><i class="bi bi-person-fill me-1"></i>Rameshbhai Patel</div>
+                            <div class="testi-location"><i class="bi bi-geo-alt me-1"></i>Varachha, Surat</div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="testi-card">
+                            <div class="testi-quote-mark">"</div>
+                            <p class="testi-text">We use their milk for our sweet shop and customers can always tell the
+                                difference. The fat content, the freshness, the taste — simply unbeatable at this price.
+                            </p>
+                            <div class="testi-stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="testi-author"><i class="bi bi-person-fill me-1"></i>Jayesh Adesara</div>
+                            <div class="testi-location"><i class="bi bi-geo-alt me-1"></i>Adajan, Surat</div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="testi-card">
+                            <div class="testi-quote-mark">"</div>
+                            <p class="testi-text">Best dahi in all of Surat — no doubt. Thick like malai, sour just
+                                enough.
+                                My family refuses to eat curd from anywhere else now. Truly blessed to have them nearby.
+                            </p>
+                            <div class="testi-stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="testi-author"><i class="bi bi-person-fill me-1"></i>Komal Desai</div>
+                            <div class="testi-location"><i class="bi bi-geo-alt me-1"></i>Citylight, Surat</div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="testi-card">
+                            <div class="testi-quote-mark">"</div>
+                            <p class="testi-text">Their ghee has changed everything in my kitchen. You can smell the
+                                difference when it hits the pan. Pure, rich, golden — exactly how it should be. Highly
+                                recommended.</p>
+                            <div class="testi-stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-half"></i>
+                            </div>
+                            <div class="testi-author"><i class="bi bi-person-fill me-1"></i>Naresh Shah</div>
+                            <div class="testi-location"><i class="bi bi-geo-alt me-1"></i>Piplod, Surat</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section id="gallery">
+        <div class="container">
+            <div class="d-flex align-items-end justify-content-between flex-wrap gap-3">
+                <div>
+                    <div class="section-label">Gallery</div>
+                    <h2 class="section-title">From Our Farm<br>To Your Table</h2>
+                    <div class="divider-line"></div>
+                </div>
+                <p class="section-sub" style="max-width:320px; margin-bottom: 2.2rem;">Hover over each card to explore
+                    our
+                    dairy process — from the farm to your family's table.</p>
+            </div>
+
+            <div class="gallery-grid">
+
+                <!-- 1: Tall left — cows -->
+                <div class="gallery-item gi-1">
+                    <div class="gallery-inner g1">
+                        <div class="gallery-icon-wrap">
+                            <i class="bi bi-droplet-fill"></i>
+                        </div>
+                        <div class="gallery-caption">Our Happy<br>Cows</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-tag"><i class="bi bi-camera me-1"></i>Farm</div>
+                        <div class="gallery-label">
+                            Our Happy Cows
+                            <small>Healthy cows, pure milk — always</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2: Top mid — milk -->
+                <div class="gallery-item gi-2">
+                    <div class="gallery-inner g2">
+                        <div class="gallery-icon-wrap">
+                            <i class="bi bi-cup-fill"></i>
+                        </div>
+                        <div class="gallery-caption">Fresh Morning Milk</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-tag"><i class="bi bi-camera me-1"></i>Dairy</div>
+                        <div class="gallery-label">
+                            Fresh Morning Milk
+                            <small>Delivered within hours of milking</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3: Top right — ghee -->
+                <div class="gallery-item gi-3">
+                    <div class="gallery-inner g3">
+                        <div class="gallery-icon-wrap">
+                            <i class="bi bi-jar-fill"></i>
+                        </div>
+                        <div class="gallery-caption">Bilona Ghee Process</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-tag"><i class="bi bi-camera me-1"></i>Process</div>
+                        <div class="gallery-label">
+                            Bilona Ghee
+                            <small>Traditional hand-churned method</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4: Mid center — paneer -->
+                <div class="gallery-item gi-4">
+                    <div class="gallery-inner g4">
+                        <div class="gallery-icon-wrap">
+                            <i class="bi bi-box-fill"></i>
+                        </div>
+                        <div class="gallery-caption">Freshly Set Paneer</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-tag"><i class="bi bi-camera me-1"></i>Product</div>
+                        <div class="gallery-label">
+                            Malai Paneer
+                            <small>Made fresh each morning</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5: Mid right — 4am -->
+                <div class="gallery-item gi-5">
+                    <div class="gallery-inner g5">
+                        <div class="gallery-icon-wrap">
+                            <i class="bi bi-sunrise-fill"></i>
+                        </div>
+                        <div class="gallery-caption">4 AM — The Work Begins</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-tag"><i class="bi bi-camera me-1"></i>Behind the Scenes</div>
+                        <div class="gallery-label">
+                            Before Sunrise
+                            <small>Every single day, without exception</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6: Full-width bottom — shop -->
+                <div class="gallery-item gi-6">
+                    <div class="gallery-inner g6" style="flex-direction:row; justify-content:center; gap:2rem;">
+                        <div class="gallery-icon-wrap" style="width:80px;height:80px;font-size:2.2rem;">
+                            <i class="bi bi-shop-window"></i>
+                        </div>
+                        <div>
+                            <div class="gallery-caption" style="text-align:left; font-size:1.4rem;">Our Dairy Shop</div>
+                            <div
+                                style="font-family:'DM Sans',sans-serif; font-size:0.82rem; color:rgba(255,255,255,0.6); margin-top:4px;">
+                                <i class="bi bi-geo-alt-fill me-1" style="color:var(--saffron-light);"></i>Varachha
+                                Road,
+                                Surat &nbsp;·&nbsp;
+                                <i class="bi bi-clock me-1" style="color:var(--saffron-light);"></i>6AM–10AM | 4PM–8PM
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-tag"><i class="bi bi-camera me-1"></i>Our Shop</div>
+                        <div class="gallery-label">
+                            Visit Us in Surat
+                            <small>Near Khodiyar Mata Mandir, Varachha Road</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 contact-info reveal">
+                    <div class="section-label">Order &amp; Enquiries</div>
+                    <h2 class="section-title" style="color:var(--cream);">Order Fresh<br>Every Morning</h2>
+                    <div class="divider-line"
+                        style="background: linear-gradient(90deg,var(--gold),var(--saffron-light));">
+                    </div>
+                    <p>The easiest way to order is on WhatsApp. Tell us what you need and we will have it at your door
+                        before sunrise.</p>
+
+                    <div class="contact-detail">
+                        <div class="contact-icon"><i class="bi bi-telephone-fill"></i></div>
+                        <div class="contact-detail-text">
+                            <strong>Call or WhatsApp</strong>
+                            +91 9510188642
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="contact-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                        <div class="contact-detail-text">
+                            <strong>Shop Address</strong>
+                            Kabilpore, Navsari, Gujarat 396424
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="contact-icon"><i class="bi bi-clock-fill"></i></div>
+                        <div class="contact-detail-text">
+                            <strong>Shop Timings</strong>
+                            6:00 AM – 10:00 AM &nbsp;|&nbsp; 4:00 PM – 8:00 PM
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="contact-icon"><i class="bi bi-truck-front-fill"></i></div>
+                        <div class="contact-detail-text">
+                            <strong>Delivery Areas</strong>
+                            Kabilpore · Navsari · Gujarat
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/919510188642" class="whatsapp-btn">
+                        <i class="bi bi-whatsapp" style="font-size:1.1rem;"></i> Chat on WhatsApp
+                    </a>
+                </div>
+
+                <div class="col-lg-6 reveal">
+                    <div class="contact-form-wrap">
+                        <div class="form-title"><i class="bi bi-envelope-fill me-2" style="color:var(--gold);"></i>Send
+                            a
+                            Message</div>
+                        <label class="form-label-custom">Your Name</label>
+                        <input type="text" class="form-ctrl" placeholder="Rameshbhai Patel">
+
+                        <label class="form-label-custom">Phone Number</label>
+                        <input type="tel" class="form-ctrl" placeholder="+91 98765 43210">
+
+                        <label class="form-label-custom">What do you need?</label>
+                        <textarea class="form-ctrl"
+                            placeholder="e.g. 2L milk and 500g paneer daily from Monday..."></textarea>
+
+                        <button class="btn-submit"
+                            onclick="alert('Thank you! We will contact you soon on WhatsApp. 🙏')">
+                            <i class="bi bi-send-fill"></i> Send Message
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="row g-4 pb-5">
+            <div class="col-12 col-md-5 col-lg-4">
+                <div class="d-flex align-items-center gap-2">
+                    <div class="nav-logo-icon"><i class="bi bi-droplet-fill"></i></div>
+                </div>
+
+                <div class="footer-brand-name mt-2">Maa Khodiyar Dairy</div>
+                <div class="footer-tagline">"Pure milk. Pure love."</div>
+
+                <div class="d-flex gap-2 mt-1">
+                    <a href="#" class="social-btn" title="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="social-btn" title="Facebook"><i class="bi bi-facebook"></i></a>
+
+                    <a href="https://wa.me/919510188642" class="social-btn" title="WhatsApp">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+
+                    <a href="tel:+919510188642" class="social-btn" title="Call">
+                        <i class="bi bi-telephone-fill"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-2 col-lg-2 footer-col">
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="#hero"><i class="bi bi-chevron-right"></i>Home</a></li>
+                    <li><a href="#products"><i class="bi bi-chevron-right"></i>Products</a></li>
+                    <li><a href="#why"><i class="bi bi-chevron-right"></i>Why Us</a></li>
+                    <li><a href="#story"><i class="bi bi-chevron-right"></i>Our Story</a></li>
+                    <li><a href="#gallery"><i class="bi bi-chevron-right"></i>Gallery</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-2 col-lg-2 footer-col">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="#"><i class="bi bi-chevron-right"></i>Taza Doodh</a></li>
+                    <li><a href="#"><i class="bi bi-chevron-right"></i>Desi Ghee</a></li>
+                    <li><a href="#"><i class="bi bi-chevron-right"></i>Malai Paneer</a></li>
+                    <li><a href="#"><i class="bi bi-chevron-right"></i>Dahi &amp; Lassi</a></li>
+                    <li><a href="#"><i class="bi bi-chevron-right"></i>White Makhan</a></li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-md-3 col-lg-4 footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li>
+                        <a href="https://wa.me/919510188642">
+                            <i class="bi bi-whatsapp"></i>WhatsApp Order
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="tel:+919510188642">
+                            <i class="bi bi-telephone"></i>+91 9510188642
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-geo-alt"></i>Kabilpore, Navsari, Gujarat 396424
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-clock"></i>6AM–10AM | 4PM–8PM
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <span><i class="bi bi-c-circle me-1"></i>2026 Maa Khodiyar Dairy. All rights reserved.</span>
+
+            <span>
+                <i class="bi bi-heart-fill me-1" style="color:var(--terracotta);"></i>
+                Made with love in Navsari, Gujarat
+            </span>
+        </div>
+    </footer>
+
+    <!-- ===== CDN SCRIPTS ===== -->
+    <!-- Bootstrap 5.3 JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper 11 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/script.js"></script>
+
+</body>
+
+</html>
